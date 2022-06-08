@@ -3,7 +3,8 @@ body {
 
     font-family: Arial;
     font-size: 12px;
-    color: #808080;
+    color: #fff;
+
 }
 
 *,
@@ -19,19 +20,93 @@ h1, h2, h3, h4, h5, h6 {
 /* Container */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
-    background: #202020;
+    
 }
 
 /* ========== HEADER ======= */
 .header {
-    padding: 32px 0;
     /* отступ для всех элем класса*/
+    background: #202020;
+    padding: 32px 0;
+    border-bottom: 1px solid #3a9dcf;
 }
 
 .header_inner {
     display:  flex;
     justify-content: space-between;
     /* пустое место между флексами */
+    align-items: center;
+    
+    
+}
+
+.header_logo {
+    font-size: 45px;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+/* NAV */
+
+.nav {
+    font-size: 15px;
+    display: flex;
+}
+
+.nav_link {
+    text-decoration: none; /* подчеркивание */
+    color: #fff;
+
+    transition: color .1s linear; /*Плавный переход*/
+
+    margin-left: 30px;
+}
+.nav_link:first-child{ /*псевдо класс, 1й элемент*/
+    margin-left: 0px;
+}
+
+.nav_link:hover { 
+    color: #a1e0ff;
+}
+
+/*============================
+=========INTRO================
+==============================*/
+
+.intro {
+    padding: 50px 0;
+    height: 350px;
+    background: #206b92 center no-repeat url(../img/featured.jpg);
+    background-size: cover;
+     /*всю ширину,высоту нашего блока и обрезается слева или права*/
+}
+.intro_inner {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.inner_text {
+    width: 50%;
+    display: flex;
+    flex-direction: column; /*встолбик*/
+    
+}
+.inner_h1_text {
+    font-size: 50px;
+    margin-bottom: 35px;
+}
+.inner_p_text {
+    margin-bottom: 35px;
+}
+.inner_p_text:last-child {
+    margin-bottom: 0px;
+}
+.inner_img {
+    width: 460px;
+    height: 250px;
+    border: 5px #fff solid;
+    background: #eeeeee;
+    margin-left: 150px;
+    align-items: center;
 }
